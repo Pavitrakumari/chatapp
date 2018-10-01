@@ -51,20 +51,12 @@ chatApp.controller('homecontroller', function ($scope, $http,$location,SocketSer
             'token': token
           }
           })  .then(function(response){
-
-            
-            console.log(response.data.message);
-
-            
-            $scope.chatlist = response.data.message;
-            
-
-    })
-    
-    SocketService.on('toclient', function(msg) {
-
-        console.log(msg);
-        $scope.chatlist.push(msg)/**push the messages to the chatlist */
+               console.log(response.data.message);
+               $scope.chatlist = response.data.message;
+            })
+            SocketService.on('toclient', function(msg) {
+                 console.log(msg);
+                 $scope.chatlist.push(msg)/**push the messages to the chatlist */
     });
 
 

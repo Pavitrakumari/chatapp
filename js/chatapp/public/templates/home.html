@@ -35,8 +35,9 @@
                 <div id="messagebox">
                     <div>
                         <div ng-repeat="chat in chatlist">
-                            <p id="leftmessagecontainer" ng-if="currentuserid !=chat.userid">{{chat.username}}:<span id="messageText">{{chat.message}}</span></p>
+                            <p id="leftmessagecontainer" ng-if="currentuserid !=chat.userid">{{chat.username}}:<span id="messageText">{{chat.message}}</span><span id=date1"</p>
                             <p id="rightmessagecontainer" ng-if="currentuserid==chat.userid">{{chat.username}}:<span id="messageText">{{chat.message}}</span><br><br></span></p>
+                            
                             <!-- <p ng-repeat = "chat in chatlist">{{chat.username}} : {{chat.message}}</p> -->
 
 
