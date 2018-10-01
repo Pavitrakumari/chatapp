@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chat &nbsp App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/home.css" />
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+
+
+    <div id="container">
+        <div id="header">
+            <!-- <div id="logo"><img src="../images/chatapp.png" width="100px" height="100px"></div> -->
+            <h1 class="h1" align="left">CHAT APP</h1>
+            <div id="logout"><button id=logoutButton type="button" ng-click="logout()">Logout</button></div>
+        </div>
+
+
+        <div id=Area>
+            <div id="leftarea">
+                <div id="userid">
+                    <li ng-repeat="x in arrlist">
+                        <a href="#">{{x}}</a>
+                    </li>
+                </div>
+            </div>
+
+            <div id="rightarea">
+                <div id="messagebox">
+                    <div>
+                        <div ng-repeat="chat in chatlist">
+                            <p id="leftmessagecontainer" ng-if="currentuserid !=chat.userid">{{chat.username}}:<span id="messageText">{{chat.message}}</span></p>
+                            <p id="rightmessagecontainer" ng-if="currentuserid==chat.userid">{{chat.username}}:<span id="messageText">{{chat.message}}</span><br><br></span></p>
+                            <!-- <p ng-repeat = "chat in chatlist">{{chat.username}} : {{chat.message}}</p> -->
+
+
+                        </div>
+
+                        <div id="sendbox">
+                            <div id="textarea">
+                                <textarea id="text" rows="4" cols="50" placeholder="Enter your message" ng-model="message"
+                                    required></textarea><button id="sendbtn" type="button" placeholder="send" ng-click="add()">send!</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- 
+  <div class="split left">              
+<div id="userid"><li ng-repeat= "x in arrlist">
+  <a href='#'>{{x}}</a></li></div>
+  <div class="split right">
+     <p ng-repeat = "chat in chatlist track by $index">{{chat.username}} : {{chat.message}}</p>
+          <h2></h2>            
+                <textarea placeholder="type your message" ng-model="message " required></textarea>
+               <div if="container">
+                <button style="float:right" ng-click ="add()">send!</button>
+             </div>
+                <p></p>
+              </div>  
+               <p></p>
+           </div>
+        <div class="split top">
+                <div class="centered">
+                 <center> <h2>Chat App                   <button >LOG OUT</button>
+                  </h2>     </center>         
+                    </div>
+                <div class ="centered" style="float:right"><h6></h6></div>
+                  </div> 
+
+
+
+ -->
+
+
+
+                <div class="footer">
+
+</body>
+
+</html>

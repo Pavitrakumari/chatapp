@@ -1,0 +1,47 @@
+    <div class="registration">
+        <form name="SaveForm">
+            <h1><i>REGISTRATION  &nbsp FORM</i></h1>
+            <label></label>
+            First  name &nbsp<input type="text" name="fname" fname ="enter your first name" required ng-model="user.fname"
+            maxlength="60" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z]{1,60}$/" />
+
+            <span style="color:rgb(10, 6, 31)" ng-show="SaveForm.fname.$dirty && SaveForm.fname.$invalid" class="ng-hide">   
+                     error
+                   </span>  
+  
+            <div>
+            &nbsp Last &nbsp  name &nbsp<input type="text" name="lname" lname="enter your last name" required ng-model="user.lname"            
+
+             maxlength="60" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z]{1,60}$/" />
+
+             <span style="color:rgb(10, 6, 31)" ng-show="SaveForm.lname.$dirty && SaveForm.lname.$invalid" class="ng-hide">   
+                      error
+                    </span>  
+   </div>
+            <div>
+            <label>Your  email &nbsp</label>
+            <input type="text" email="email" email="enter your email address" required ng-model="user.email"
+            maxlength="100" ng-pattern="/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" />
+            <span style="color:rgb(39, 22, 22)" ng-show="SaveForm.email.$dirty && SaveForm.email.$invalid" class="ng-hide">   
+                    error 
+                    </span> </div>
+            <label>&nbsp &nbsp Password  </label>
+            <input type="password" password="enter a password" required ng-model="user.password"/>
+            <p class="error">
+                <span>&nbsp</span>
+            </p>
+    
+            <label>confirm Password </label>
+            <input type="password" />
+            <p class="error">
+                <span>&nbsp </span>
+            </p>
+            <div class="register_button" value="register"></div>
+            <button ng-click='register()'>REGISTER</button>
+            <h3>{{message}}</h3>
+                <span><a href="#">sign In</a></span>
+            </div>
+        </form>
+        <h2>{{message}}</h2>
+
+    </div>

@@ -1,0 +1,104 @@
+h3{
+  
+  font-size:2.5em;
+  color:#75ca13;
+
+  font-weight: bold;
+  text-align:center
+
+
+
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  background:#f4fbfc;
+  margin: 0 auto 0 auto;  
+  width:100%; 
+  text-align:center;
+  margin: 20px 0px 20px 0px;   
+}
+
+.registration form {
+  width: 400px;
+  height:400px;
+  background-color: rgb(175, 138, 187);
+    box-shadow:5px 10px rgb(77, 87, 231);
+
+  padding: 100px 100px 100px 100px;
+    text-align:center;
+
+    border-radius:200px 0px 200px 0px;
+  margin: 50px  0px 550px 500px;
+
+  color: rgb(27, 63, 180);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Century Gothic";
+}
+
+.registration input, .registration select {
+  width: 195px;
+  height: 30px;
+  margin: 10px 10px 20px 20px;
+  border: 0px;
+  font-weight: bold;
+}
+
+.registration input:focus {
+  background-color: orange;
+}
+
+.registration form label {
+  margin: 5px 0px 0px 15px;
+}
+
+a {
+  outline: none;
+}
+
+
+.register_button {
+  width: 160px;
+  height: 42px;
+  background-color: orange;
+  border-radius: 10px;
+  margin: -10px auto 0px auto;
+  text-align: center;
+  
+  cursor: pointer;
+  clear: both;
+}
+
+.register_button span {
+  font-weight: normal;
+  font-size: 28px;
+  font-family: "Impact";
+  line-height: 40px;
+}
+
+.register_button span a {
+  text-decoration: none;
+  color: white;
+}
+
+.register_button span a:hover {
+  color: black;
+}
+
+span.error {
+  margin-right: 20px;
+  font-size: 9px;
+  color: orange;
+  height: 10px;
+}
+
+p.error {
+  margin: 0px 14px 0px 10px;
+  font-size: 9px;
+  color: orange;
+  height: 6px;
+  padding: 0px 0px 8px 0px;
+  text-align: right;
+  text-transform: none;
+}
