@@ -11,14 +11,17 @@ chatApp.config(function ($routeProvider) {
             controller:'logincontroller'
         
         })
+/**The ngRoute module helps your application to become a Single Page Application.
 
-        // route for the about page
+ */
+        // route for the login page
         .when('/register', {
             templateUrl: 'templates/register.html',
             controller:'registercontroller'
             
             
         })
+        /**router for dashboard page */
         .when('/home',{
           
 
@@ -26,7 +29,15 @@ chatApp.config(function ($routeProvider) {
             controller:'homecontroller'
 
         })
+        .when('/peer',{
+            templateUrl:'templates/peer.html',
+            controller:'peercontroller'
+
+
+
+        })
     });
+    /**WebSockets is a protocol that provides a bi-directional communication channel. */
         chatApp.service('SocketService', ['socketFactory', function SocketService(socketFactory) {
             return socketFactory({
                 ioSocket: io.connect('http://localhost:4000')

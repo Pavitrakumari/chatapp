@@ -21,17 +21,28 @@ chatApp.controller('homecontroller', function ($scope, $http,$location,SocketSer
     }).then(function (response) {
         console.log(response.data.message[0])
         for(var i=0;i<(response.data.message).length;i++){
-            arrlist.push(response.data.message[i].username)
+            arrlist.push(response.data.message[i])
         }
         console.log(arrlist);
     })
        $scope.arrlist = arrlist;
-// $scope.logout=function () {
-//            localStorage.removeItem(token);
-//            localStorage.removeItem(userid);
-//            $location.path('/login');
+ $scope.logout=function () {
+        localStorage.removeItem(token);/**remove the items when logout & go back */
+            localStorage.removeItem(userid);
+            $location.path('/login');
     
-//          }
+          }
+          localStorage.setItem("userid",userid);/**set the token into the local storage */
+
+          $scope.particular=function(userid,username){
+            localStorage.setItem("receiverid",userid);/**set the userid to the local storage */
+
+         //localStorage.setItem("receiverid",userid);/**set the userid to the local storage */
+          localStorage.setItem("receivername",username);/**set the userid to the local storage */
+ $location.path("/peer");
+ //$scope.temp=0;
+ //console.log(username);
+          }
 
          $scope.chatlist = [];
          $scope.add = function(){/**add method to add the messages to the front end */
@@ -53,11 +64,28 @@ chatApp.controller('homecontroller', function ($scope, $http,$location,SocketSer
           })  .then(function(response){
                console.log(response.data.message);
                $scope.chatlist = response.data.message;
+            //    $scope.chatlist = response.data.dateTime;
+
+            
             })
-            SocketService.on('toclient', function(msg) {
-                 console.log(msg);
-                 $scope.chatlist.push(msg)/**push the messages to the chatlist */
-    });
+    //         SocketService.on('toclient', function(msg) {
+    //              console.log(msg);
+    //              $scope.chatlist.push(msg);/**push the messages to the chatlist */
+                
+
+    // });
+    uName=[];
+    uName.push(username);
+    $scope.userName=uName;
+    $scope.currentuserid=userid;
+    SocketService.on('toclient', function(msg) {
+        console.log(msg);
+        $scope.chatlist.push(msg);/**push the messages to the chatlist */
+       
+
+});
+
+
 
 
    

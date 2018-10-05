@@ -1,3 +1,5 @@
+
+/**cascading style shhets for register page*/
 h3{
   
   font-size:2.5em;
@@ -21,7 +23,7 @@ body{
 .registration form {
   width: 400px;
   height:400px;
-  background-color: rgb(175, 138, 187);
+  background-color: rgb(198, 229, 236);
     box-shadow:5px 10px rgb(77, 87, 231);
 
   padding: 100px 100px 100px 100px;
@@ -45,10 +47,6 @@ body{
   font-weight: bold;
 }
 
-.registration input:focus {
-  background-color: orange;
-}
-
 .registration form label {
   margin: 5px 0px 0px 15px;
 }
@@ -61,7 +59,7 @@ a {
 .register_button {
   width: 160px;
   height: 42px;
-  background-color: orange;
+
   border-radius: 10px;
   margin: -10px auto 0px auto;
   text-align: center;

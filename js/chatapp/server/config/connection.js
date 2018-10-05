@@ -1,3 +1,4 @@
+/**It is used to establish mongo db connection  */
 exports=function ConnectDB() {
 
     console.log("in");

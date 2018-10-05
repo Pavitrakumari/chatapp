@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chat &nbsp App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/home.css" />
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+                        
+<div class="whole">
+    <!-- <div class = "back"> -->
+            <div class ="but2">
+
+            <div class="boxed">
+
+                  <center> <h1>ChatApp</h1> </center>
+                  <center> <h3 style=" font-family: 'Tangerine', serif"></h3> </center>
+                    <div class = "container">
+                            <div>
+                                <div align = "left">
+                                        <div class = "log">
+                                                 <a href='#!/login'><button type = "submit" value = "Submit" ng-click = "home()" style="padding:10px;color:whitesmoke;background-color: #3B5998; font-size:15px;font-family: 'Tangerine', serif">LOG OUT</button></a>        
+                                   </div> 
+                                </div>  
+                            </div> 
+                         </div>
+                     </div>
+
+    <div class="boxed1">
+           
+                            
+                     <div class = "list">
+                            <h3 id = "h4">FriendsList</h3><br><br><br><br>
+                            
+                         <ul  style="float:left">
+                                <li  align = "left" type = "none" ng-repeat = "key in arrlist">
+                                    <!-- <a href ng-click="particular(key.userid,key.username)"{{key.username}}></a> -->
+                              <font color="black"><button id="frnds"> {{key}}</button>   </font>
+                             
+                             </li>
+                       </ul> 
+                   </div>
+
+      <div class = "res" style="float:right">
+
+        <ul align = "left" ng-repeat = "x in chatlist track by $index"><p  id="left" ng-if = "currentuserid != x.senderid">{{x.sendername}} : 
+            <span>{{x.message}}</span><br><br>
+                            <span id = "time" > {{x.dateTime | date: 'medium'}}</span></p>
+                            <p id="right" ng-if = "currentuserid== x.senderid">{{x.sendername}} : 
+                                <span>{{x.message}}</span><br><br>
+                                  <span id = "time" >{{x.dateTime | date: 'medium'}}</span></p>
+                                </div>
+
+
+                            <div class = "textarea">
+                                <textarea rows = "2" cols = "200" placeholder = "Enter message " ng-model = "message" ></textarea>
+                                    
+                                
+                                        
+                            </div>
+
+                            <div class = "send">
+                                <button type = "submit" value = "Submit" ng-click = "send()" style="padding: 4px;color:whitesmoke;background-color: #3B5998; font-size:20px;font-family: 'Tangerine', serif"> Send</button>
+                            </div>
+                        </div>   
+                    </div>
+                
+                    
+                </div>                  
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div id="container">
+        <div id="header">
+            
+            <h1 class="h1" align="left">CHAT APP</h1>
+            <div id="logout"><button id=logoutButton type="button" ng-click="logout()">Logout</button></div>
+        </div>
+
+
+        <div id=Area>
+            <div id="leftarea">
+                <div id="userid">
+                    <li ng-repeat="x in arrlist">
+                        <a href="#">{{x}}</a>
+                    </li>
+                </div>
+            </div>
+
+            <div id="rightarea">
+                <div id="messagebox">
+                    <div>
+                        <div ng-repeat="chat in chatlist">
+                            <p id="leftmessagecontainer" ng-if="currentuserid !=chat.userid">{{chat.username}}:<span id="messageText">{{chat.message}}</span><span id=date1"</p>
+                            <p id="rightmessagecontainer" ng-if="currentuserid==chat.userid">{{chat.username}}:<span id="messageText">{{chat.message}}</span><br><br></span></p>
+                            
+                            <p ng-repeat = "chat in chatlist">{{chat.username}} : {{chat.message}}</p> 
+
+
+                        </div>
+
+                        <div id="sendbox">
+                            <div id="textarea">
+                                <textarea id="text" rows="4" cols="50" placeholder="Enter your message" ng-model="message"
+                                    required></textarea><button id="sendbtn" type="button" placeholder="send" ng-click="add()">send!</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footer"> -->
+
+</body>
+
+</html>
